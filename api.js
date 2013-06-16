@@ -1,9 +1,7 @@
-var express = require('express');
+var express = require('express'),
+    friends = require('./routes/friend');
 var app = express();
 
-app.get('/friend',function(req,res){
-res.send([{name:'Naing Ye Min'},{name:'Bone Pyae Sone'},{name:'Thiha Tun'}]);
-});
-
+app.get('/friends',friends.findAll);
 app.listen(3000);
 console.log('Listening on port 3000');
