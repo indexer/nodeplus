@@ -8,5 +8,6 @@ app.configure(function()
             app.use(express.bodyParser());
         });
 app.get('/friends',friends.findAll);
+app.get('/friends/:id', friends.findById);
 app.listen(3000);
 console.log('Listening on port 3000');
