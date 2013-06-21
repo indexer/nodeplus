@@ -37,7 +37,7 @@ exports.findAll = function(req,res)
 export.addFriend = (function(req,res)
         {
  var  friend = req.body;
- console.log('Adding friend : ' + JSON.stringify(wine));
+ console.log('Adding friend : ' + JSON.stringify(friends));
  db.collection('friends', function(err, collection) {
  collection.insert(friends, {safe:true}, function(err, result) {
  if (err) {
