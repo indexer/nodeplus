@@ -9,5 +9,6 @@ app.configure(function()
         });
 app.get('/friends',friends.findAll);
 app.get('/friends/:id', friends.findById);
+app.post(/friends',friends.addFriend);
 app.listen(3000);
 console.log('Listening on port 3000');
